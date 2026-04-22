@@ -45,10 +45,7 @@ nav {
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
 }
-.nav-mark {
-  font-family: var(--mono); font-size: 13px; color: var(--lime);
-  letter-spacing: -0.02em;
-}
+.nav-mark { font-family: var(--mono); font-size: 13px; color: var(--lime); letter-spacing: -0.02em; }
 .nav-mark span { color: var(--muted); }
 nav ul { list-style: none; display: flex; gap: 32px; }
 nav a { font-family: var(--mono); font-size: 11px; color: var(--muted); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
@@ -61,165 +58,75 @@ nav a:hover { color: var(--fg); }
 }
 
 /* ── HERO ── */
-#hero {
-  min-height: 100vh;
-  padding: 56px 0 0;
-  display: flex; flex-direction: column;
-  position: relative; overflow: hidden;
-}
-.hero-ticker {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 10px 0; overflow: hidden;
-  white-space: nowrap;
-}
-.ticker-inner {
-  display: inline-block;
-  animation: ticker 26s linear infinite;
-}
-.ticker-inner span {
-  font-family: var(--mono); font-size: 11px; color: var(--muted);
-  letter-spacing: 0.12em; text-transform: uppercase; padding: 0 32px;
-}
+#hero { min-height: 100vh; padding: 56px 0 0; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.hero-ticker { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 10px 0; overflow: hidden; white-space: nowrap; }
+.ticker-inner { display: inline-block; animation: ticker 26s linear infinite; }
+.ticker-inner span { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; padding: 0 32px; }
 .ticker-inner span.hi { color: var(--lime); }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-.hero-main {
-  flex: 1; display: grid;
-  grid-template-columns: 1fr 420px;
-  border-bottom: 1px solid var(--border);
-}
-.hero-copy {
-  padding: 60px 48px;
-  border-right: 1px solid var(--border);
-  display: flex; flex-direction: column; justify-content: space-between;
-}
-.hero-label {
-  font-family: var(--mono); font-size: 11px;
-  color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase;
-  margin-bottom: 24px;
-  animation: in 0.6s ease both;
-}
-h1 {
-  font-family: var(--display);
-  font-size: clamp(72px, 9vw, 136px);
-  line-height: 0.92; letter-spacing: 0.01em;
-  animation: in 0.6s 0.06s ease both;
-}
-h1 .stroke {
-  -webkit-text-stroke: 1.5px var(--fg);
-  color: transparent;
-}
+.hero-main { flex: 1; display: grid; grid-template-columns: 1fr 420px; border-bottom: 1px solid var(--border); }
+.hero-copy { padding: 60px 48px; border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; }
+.hero-label { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 24px; animation: in 0.6s ease both; }
+h1 { font-family: var(--display); font-size: clamp(72px, 9vw, 136px); line-height: 0.92; letter-spacing: 0.01em; animation: in 0.6s 0.06s ease both; }
+h1 .stroke { -webkit-text-stroke: 1.5px var(--fg); color: transparent; }
 h1 .color-lime { color: var(--lime); }
 h1 .color-coral { color: var(--coral); }
-.hero-bio {
-  margin-top: 40px; max-width: 500px;
-  font-size: 17px; line-height: 1.75; color: #7A7888;
-  animation: in 0.6s 0.12s ease both;
-}
+.hero-bio { margin-top: 40px; max-width: 500px; font-size: 17px; line-height: 1.75; color: #7A7888; animation: in 0.6s 0.12s ease both; }
 .hero-bio strong { color: var(--fg); font-weight: 400; font-style: italic; }
-.hero-actions {
-  display: flex; gap: 14px; margin-top: 48px; flex-wrap: wrap;
-  animation: in 0.6s 0.18s ease both;
-}
-.btn {
-  font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em;
-  text-transform: uppercase; padding: 12px 24px; border-radius: 4px;
-  text-decoration: none; transition: all 0.18s; display: inline-block;
-}
+.hero-actions { display: flex; gap: 14px; margin-top: 48px; flex-wrap: wrap; animation: in 0.6s 0.18s ease both; }
+.btn { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 12px 24px; border-radius: 4px; text-decoration: none; transition: all 0.18s; display: inline-block; }
 .btn-lime { background: var(--lime); color: #0C0C0F; font-weight: 500; }
 .btn-lime:hover { background: #d4f54a; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200,241,53,0.2); }
 .btn-ghost { border: 1px solid var(--border); color: var(--muted); }
 .btn-ghost:hover { border-color: var(--muted); color: var(--fg); transform: translateY(-2px); }
 
-.hero-aside {
-  padding: 60px 40px;
-  display: flex; flex-direction: column; justify-content: space-between;
-  animation: in 0.6s 0.24s ease both;
-}
+.hero-aside { padding: 60px 40px; display: flex; flex-direction: column; justify-content: space-between; animation: in 0.6s 0.24s ease both; }
 .aside-block { margin-bottom: 32px; }
 .aside-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-.aside-value { font-family: var(--display); font-size: 52px; line-height: 1; color: var(--fg); }
+.aside-value { font-family: var(--display); font-size: 52px; line-height: 1; }
 .aside-sub { font-size: 14px; color: var(--muted); margin-top: 4px; }
 .color-bar { display: flex; height: 4px; border-radius: 2px; overflow: hidden; gap: 2px; margin-top: 48px; }
 .color-bar div { flex: 1; border-radius: 2px; }
 
-@keyframes in {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: none; }
-}
+@keyframes in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 
-.marquee-row {
-  display: flex; gap: 0;
-  border-bottom: 1px solid var(--border);
-  overflow-x: auto; scrollbar-width: none;
-}
+.marquee-row { display: flex; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; }
 .marquee-row::-webkit-scrollbar { display: none; }
-.marquee-item {
-  flex-shrink: 0;
-  padding: 18px 28px;
-  border-right: 1px solid var(--border);
-  font-family: var(--mono); font-size: 12px;
-  color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;
-  white-space: nowrap;
-}
+.marquee-item { flex-shrink: 0; padding: 18px 28px; border-right: 1px solid var(--border); font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
 .marquee-item.active { color: var(--lime); }
 
 /* ── SECTIONS ── */
 section { border-bottom: 1px solid var(--border); }
 .s-inner { padding: 80px 48px; }
-.s-head {
-  display: flex; align-items: flex-end; gap: 20px;
-  padding-bottom: 48px; border-bottom: 1px solid var(--border); margin-bottom: 48px;
-}
+.s-head { display: flex; align-items: flex-end; gap: 20px; padding-bottom: 48px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
 .s-num { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; padding-bottom: 6px; }
 h2 { font-family: var(--display); font-size: clamp(36px, 5vw, 64px); letter-spacing: 0.02em; line-height: 1; }
 
 /* ── SKILLS ── */
 #skills { background: var(--surface); }
-.skills-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.skills-cols { display: grid; grid-template-columns: repeat(4, 1fr); }
 .skill-col { padding: 32px; border-right: 1px solid var(--border); }
 .skill-col:last-child { border-right: none; }
-.skill-col-head {
-  font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em;
-  text-transform: uppercase; padding-bottom: 20px; margin-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-}
+.skill-col-head { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid var(--border); }
 .skill-col-head.c-lime   { color: var(--lime); }
 .skill-col-head.c-violet { color: var(--violet); }
 .skill-col-head.c-coral  { color: var(--coral); }
 .skill-col-head.c-sky    { color: var(--sky); }
-.skill-item {
-  font-size: 16px; color: #6A6880; padding: 7px 0;
-  border-bottom: 1px solid var(--dim); transition: color 0.18s; cursor: default;
-}
+.skill-item { font-size: 16px; color: #6A6880; padding: 7px 0; border-bottom: 1px solid var(--dim); transition: color 0.18s; cursor: default; }
 .skill-item:hover { color: var(--fg); }
 .skill-item:last-child { border-bottom: none; }
 
 /* ── PROJECTS ── */
-.project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
-.project-card {
-  padding: 48px;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  text-decoration: none; color: inherit;
-  display: block; position: relative; overflow: hidden;
-  transition: background 0.25s;
-}
+.project-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.project-card { padding: 48px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; transition: background 0.25s; }
 .project-card:nth-child(even) { border-right: none; }
 .project-card:nth-last-child(-n+2) { border-bottom: none; }
 .project-card:hover { background: var(--surface); }
-.project-card::after {
-  content: '↗'; position: absolute; top: 48px; right: 48px;
-  font-size: 20px; color: var(--muted);
-  transition: transform 0.2s, color 0.2s;
-}
+.project-card::after { content: '↗'; position: absolute; top: 48px; right: 48px; font-size: 20px; color: var(--muted); transition: transform 0.2s, color 0.2s; }
 .project-card:hover::after { transform: translate(4px,-4px); color: var(--fg); }
 .project-tag-row { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
-.project-tag {
-  font-family: var(--mono); font-size: 10px; padding: 3px 10px; border-radius: 3px;
-  letter-spacing: 0.06em; text-transform: uppercase;
-}
+.project-tag { font-family: var(--mono); font-size: 10px; padding: 3px 10px; border-radius: 3px; letter-spacing: 0.06em; text-transform: uppercase; }
 .tag-lime   { background: rgba(200,241,53,0.1);  color: var(--lime); }
 .tag-violet { background: rgba(139,92,246,0.12); color: var(--violet); }
 .tag-coral  { background: rgba(255,95,95,0.1);   color: var(--coral); }
@@ -231,7 +138,7 @@ h2 { font-family: var(--display); font-size: clamp(36px, 5vw, 64px); letter-spac
 
 /* ── ABOUT ── */
 #about { background: var(--surface); }
-.about-layout { display: grid; grid-template-columns: 1fr 1px 1fr; gap: 0; }
+.about-layout { display: grid; grid-template-columns: 1fr 1px 1fr; }
 .about-divider { background: var(--border); }
 .about-left { padding-right: 64px; }
 .about-right { padding-left: 64px; }
@@ -239,66 +146,34 @@ h2 { font-family: var(--display); font-size: clamp(36px, 5vw, 64px); letter-spac
 .about-text p { margin-bottom: 20px; }
 .about-text p:last-child { margin-bottom: 0; }
 .about-text strong { color: var(--fg); font-weight: 400; font-style: italic; }
-.exp-row {
-  display: flex; justify-content: space-between;
-  padding: 18px 0; border-bottom: 1px solid var(--border); align-items: baseline;
-}
+.exp-row { display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid var(--border); align-items: baseline; }
 .exp-row:first-child { border-top: 1px solid var(--border); }
 .exp-title { font-size: 17px; color: var(--fg); }
 .exp-co { font-size: 14px; color: var(--muted); margin-top: 2px; font-family: var(--mono); }
 .exp-yr { font-family: var(--mono); font-size: 11px; color: var(--muted); flex-shrink: 0; margin-left: 20px; }
-
-/* certs */
-.cert-list { margin-top: 36px; display: flex; flex-direction: column; gap: 0; }
-.cert-item {
-  display: flex; align-items: center; gap: 14px;
-  padding: 14px 0; border-bottom: 1px solid var(--border);
-  font-size: 14px; color: var(--muted);
-}
+.cert-list { margin-top: 36px; display: flex; flex-direction: column; }
+.cert-item { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--muted); }
 .cert-item:first-child { border-top: 1px solid var(--border); }
 .cert-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 
 /* ── CONTACT ── */
 #contact { background: var(--bg); position: relative; overflow: hidden; }
 #contact .s-inner { position: relative; z-index: 2; }
-.contact-bg-text {
-  position: absolute; bottom: -20px; left: 0; right: 0;
-  font-family: var(--display); font-size: clamp(80px, 14vw, 200px);
-  color: var(--border); letter-spacing: 0.02em; white-space: nowrap;
-  pointer-events: none; user-select: none; z-index: 1; overflow: hidden;
-}
+.contact-bg-text { position: absolute; bottom: -20px; left: 0; right: 0; font-family: var(--display); font-size: clamp(80px, 14vw, 200px); color: var(--border); letter-spacing: 0.02em; white-space: nowrap; pointer-events: none; user-select: none; z-index: 1; overflow: hidden; }
 .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 .contact-email-wrap { margin-top: 12px; }
-.contact-email {
-  font-family: var(--display); font-size: clamp(22px, 3vw, 42px);
-  color: var(--lime); text-decoration: none; letter-spacing: 0.02em;
-  display: inline-block; line-height: 1;
-  border-bottom: 2px solid rgba(200,241,53,0.2); padding-bottom: 6px;
-  transition: border-color 0.2s, color 0.2s;
-}
+.contact-email { font-family: var(--display); font-size: clamp(22px, 3vw, 42px); color: var(--lime); text-decoration: none; letter-spacing: 0.02em; display: inline-block; line-height: 1; border-bottom: 2px solid rgba(200,241,53,0.2); padding-bottom: 6px; transition: border-color 0.2s, color 0.2s; }
 .contact-email:hover { border-color: var(--lime); color: #d4f54a; }
 .contact-note { font-size: 16px; color: var(--muted); margin-top: 20px; line-height: 1.7; }
-.links-grid { display: flex; flex-direction: column; gap: 0; }
-.ext-link {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 20px 0; border-bottom: 1px solid var(--border);
-  text-decoration: none; color: var(--muted);
-  font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em;
-  transition: color 0.18s;
-}
+.links-grid { display: flex; flex-direction: column; }
+.ext-link { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--muted); font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em; transition: color 0.18s; }
 .ext-link:first-child { border-top: 1px solid var(--border); }
 .ext-link:hover { color: var(--fg); }
 .ext-link span { font-size: 16px; transition: transform 0.2s; }
 .ext-link:hover span { transform: translate(3px,-3px); }
 
 /* ── FOOTER ── */
-footer {
-  padding: 20px 48px;
-  display: flex; justify-content: space-between;
-  font-family: var(--mono); font-size: 11px; color: var(--muted);
-  border-top: 1px solid var(--border);
-  letter-spacing: 0.06em;
-}
+footer { padding: 20px 48px; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; color: var(--muted); border-top: 1px solid var(--border); letter-spacing: 0.06em; }
 
 /* ── REVEAL ── */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -364,8 +239,8 @@ footer {
         <p class="hero-bio">
           <strong>Senior Software Engineer</strong> with 6+ years building scalable enterprise web applications.
           I specialise in <strong>Angular, React, TypeScript,</strong> and <strong>.NET</strong> —
-          shipping production-grade, WCAG-compliant interfaces used by
-          <strong>50,000+ users</strong> in regulated healthcare environments.
+          shipping production-grade, WCAG-compliant platforms for a SaaS serving
+          <strong>90+ health plans and 8 state agencies</strong> across the US.
         </p>
       </div>
       <div class="hero-actions">
@@ -382,9 +257,9 @@ footer {
           <div class="aside-sub">Professional engineering</div>
         </div>
         <div class="aside-block">
-          <div class="aside-label">Users served</div>
-          <div class="aside-value" style="color:var(--coral)">50K+</div>
-          <div class="aside-sub">Across enterprise products</div>
+          <div class="aside-label">Health plans served</div>
+          <div class="aside-value" style="color:var(--coral)">90+</div>
+          <div class="aside-sub">Across Medicaid, Medicare & ACA</div>
         </div>
         <div class="aside-block">
           <div class="aside-label">Perf. improvement</div>
@@ -480,8 +355,8 @@ footer {
         <span class="project-tag tag-lime">.NET</span>
         <span class="project-tag tag-gold">Healthcare</span>
       </div>
-      <div class="project-name">ENROLLMENT PLATFORM</div>
-      <p class="project-desc">Enterprise healthcare web app supporting 50K+ users across enrollment, billing, and payment systems. Reduced frontend dev time by 30% via a centralised Angular component library.</p>
+      <div class="project-name">ACA ENROLLMENT PLATFORM</div>
+      <p class="project-desc">Built and scaled enterprise enrollment, billing, and payment systems for a SaaS platform serving 90+ health plans and 8 state agencies across Medicaid, Medicare, and the ACA Marketplace. Reduced frontend dev time by 30% via a centralised Angular component library.</p>
       <div class="project-year">Softheon — 2019–2026</div>
     </a>
 
@@ -492,7 +367,7 @@ footer {
         <span class="project-tag tag-violet">Lazy Loading</span>
       </div>
       <div class="project-name">BILLING MODULE</div>
-      <p class="project-desc">Optimised the core billing module by 40% through Angular lazy loading and NgRx state management. Implemented AG Grid data tables with server-side pagination and custom cell renderers.</p>
+      <p class="project-desc">Optimised the core billing module by 40% through Angular lazy loading and NgRx state management. Implemented AG Grid data tables with server-side pagination and custom cell renderers for large-scale dataset handling.</p>
       <div class="project-year">Softheon — 2021</div>
     </a>
 
@@ -504,7 +379,7 @@ footer {
         <span class="project-tag tag-sky">AWS / GCP</span>
       </div>
       <div class="project-name">ANALYTICS DASHBOARD</div>
-      <p class="project-desc">Personal project: React + TypeScript healthcare analytics dashboard visualising member enrollment, payment data, and operational metrics. Serverless cloud architecture on AWS and GCP.</p>
+      <p class="project-desc">Personal project: React + TypeScript healthcare analytics dashboard visualising member enrollment, payment data, and operational metrics. Serverless cloud architecture on AWS and GCP, with full Playwright test coverage.</p>
       <div class="project-year">Personal — 2026</div>
     </a>
 
@@ -514,8 +389,8 @@ footer {
         <span class="project-tag tag-sky">Cypress</span>
         <span class="project-tag tag-gold">WCAG 2.1</span>
       </div>
-      <div class="project-name">CHECKOUT SYSTEM</div>
-      <p class="project-desc">Designed a reusable plug-and-play checkout experience (Stripe-style) enabling multiple products to integrate secure payment flows with minimal engineering effort. 100% WCAG-compliant.</p>
+      <div class="project-name">PLUG-AND-PLAY CHECKOUT</div>
+      <p class="project-desc">Designed a reusable Stripe-style checkout experience enabling multiple products to integrate secure payment flows with minimal engineering effort — 100% WCAG-compliant, with automated E2E test coverage cutting regression defects by 40–50%.</p>
       <div class="project-year">Softheon — 2023</div>
     </a>
 
@@ -533,8 +408,8 @@ footer {
       <div class="about-left reveal">
         <div class="about-text">
           <p>I'm a Senior Software Engineer based in <strong>Santa Clara, CA</strong> specialising in frontend and full-stack development with Angular, React, TypeScript, and .NET.</p>
-          <p>For 6+ years at <strong>Softheon</strong>, I built and scaled enterprise healthcare applications, architected reusable component libraries, and led end-to-end testing initiatives that cut regression defects by <strong>40–50%</strong>.</p>
-          <p>I care about <strong>accessible, performant interfaces</strong> — shipping code that's fast, maintainable, and genuinely usable for everyone, including in regulated environments demanding WCAG 2.1 compliance.</p>
+          <p>For 6+ years at <strong>Softheon</strong>, I built and scaled enterprise healthcare applications on a platform serving <strong>90+ health plans and 8 state agencies</strong> — supporting coverage for millions of Americans across Medicaid, Medicare, and the ACA Marketplace.</p>
+          <p>I care about <strong>accessible, performant interfaces</strong> — shipping code that's fast, maintainable, and genuinely usable for everyone, including in regulated environments demanding full WCAG 2.1 compliance.</p>
           <p>I also mentor junior engineers, run code reviews, and thrive in cross-functional Agile teams working closely with product, backend, and QA.</p>
         </div>
       </div>
@@ -561,7 +436,6 @@ footer {
           </div>
           <div class="exp-yr">2016</div>
         </div>
-
         <div class="cert-list">
           <div class="cert-item">
             <div class="cert-dot" style="background:var(--lime)"></div>
